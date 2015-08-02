@@ -1,0 +1,343 @@
+/* RESET
+--------------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* MAIN
+--------------------------------------------------------------------- */
+html, body {
+    margin: 0;
+    font-size: 11pt;
+    font-family: Arial;
+    
+}
+button {
+    cursor: pointer;
+}
+p {
+    margin-bottom: 20px;
+}
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+.center {
+    text-align: center !important;
+}
+.hidden {
+    display: none;
+}
+nav {
+    text-align: center;
+    padding: 20px 5px 20px 5px;
+    background: #EEE;
+    border-bottom: 1px solid #CCC;
+}
+
+/* PANE
+--------------------------------------------------------------------- */
+.pane {
+    display: none;
+    padding: 25px 15px;
+}
+
+/* ITEMS TABLE
+--------------------------------------------------------------------- */
+.pane .items {
+    width: 100%;
+    border-collapse: collapse;
+}
+.pane .items thead th {
+    text-align: left;
+    padding: 10px;
+    background: #4ba2db;
+    font-size: 13pt;
+    font-weight: normal;
+    color: #FFF;
+}
+.pane .items thead{
+    border: 1px solid #4ba2db;
+}
+.pane .items tbody{
+    border: 1px solid #CCC;
+}
+.pane .items tbody td {
+    cursor: pointer;
+    border-top: 1px dotted #BBB;
+    padding: 10px;
+}
+.pane .items tbody tr.even td {
+    background: #f8faf9;
+}
+.pane .items tbody tr.editable td div {
+    cursor: text;
+}
+.pane .items tbody tr:first-child td{
+    border-top: none;
+}
+.pane .items tbody tr.no-items td {
+    color: red;
+    padding: 20px;
+    text-align: center;
+}
+
+/* KEY
+--------------------------------------------------------------------*/
+.key{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+	margin-top: 15px;
+}
+.key li{
+    display: inline;
+    padding-right: 15px;
+    font-size: 9pt;
+}
+.key .square{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #BBB;
+    margin-right: 5px;
+    *display: inline;
+    *zoom: 1;
+}
+.key .open,
+.pane .items tbody tr.open td {
+    background: #FFF;
+}
+.key .filled,
+.pane .items tbody tr.filled td {
+    background: #e7fde8;
+}
+.key .canceled,
+.pane .items tbody tr.canceled td {
+    text-decoration: line-through;
+    background: #ffe2e2;
+}
+
+/* FORM
+--------------------------------------------------------------------- */
+.pane form input {
+    padding: 6px 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #444;
+    border: 1px solid #CCC;
+}
+#date {
+    width: 130px;
+    margin-right: 10px;
+}
+#time {
+    width: 80px;
+}
+#name {
+    width: 250px;
+}
+#count {
+    width: 70px;
+    text-align: center;
+}
+
+/* BUTTONS
+--------------------------------------------------------------------- */
+.btn {
+    border: none;
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 11;
+    -moz-border-radius: 11;
+    border-radius: 7px;
+    font-family: Arial;
+    color: #FFF;
+    font-size: 14px;
+    padding: 8px;
+    text-decoration: none;
+}
+.btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+.btn-add{
+    margin-top: 5px;
+}
+.btn-remove{
+    padding: 6px 9px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.btn-remove-all{
+    background: #91d4ff;
+    color: #2673a5;
+    background-image: none;
+    display: none;
+    white-space: nowrap;
+    padding: 6px 8px;
+    border-radius: 5px;
+    font-size: 11px;
+}
+.btn-remove-all:hover{
+    background: #d3eeff;
+}
+
+/* NAV BUTTONS
+--------------------------------------------------------------------- */
+nav .btn {
+    border: none;
+    background: #F5F5F5;
+    background-image: none;
+    -webkit-border-radius: 11;
+    -moz-border-radius: 11;
+    border-radius: 7px;
+    font-family: Arial;
+    color: #AAA;
+    font-size: 14px;
+    padding:8px;
+    text-decoration: none;
+    border: 1px solid #BBB;
+    margin-right: 10px;
+}
+nav .btn:hover {
+    background: #c0c2c2;
+    color: #FFF;
+    background-image: none;
+    text-decoration: none;
+}
+nav .btn.active,
+nav .btn.active:hover{
+    border: none;
+    color: #FFF;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+}
+
+
+/* PLUGIN OVERRIDES
+--------------------------------------------------------------------- */
+.dtpicker-content {
+    border-radius: 10px !important;
+    max-width: 350px;
+}
+.dtpicker-buttonCont .dtpicker-button {
+    background: #3498db;
+    color: #fff;
+    border-radius: 7px;
+}
+.dtpicker-buttonCont .dtpicker-buttonClear {
+    background: #d69393;
+    color: #FFF;
+}
+.dtpicker-buttonCont .dtpicker-buttonClear:hover {
+    background: #b16464;
+    color: #FFF;
+}
+.dtpicker-buttonCont .dtpicker-buttonSet {
+    background: #93d69a;
+    color: #FFF;
+}
+.dtpicker-buttonCont .dtpicker-buttonSet:hover {
+    background: #59a260;
+    color: #FFF;
+}
+.dtpicker-header .dtpicker-title {
+    display: none;
+    color: #FFF;
+}
+.dtpicker-header .dtpicker-value {
+    color: #0a588e;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 0.8em 0.2em 0.2em;
+    text-align: center;
+}
+.dtpicker-header .dtpicker-close {
+    color: #CCC;
+    cursor: pointer;
+    font-size: 3em;
+    padding: 0.5em 0.5em 1em 1em;
+    position: absolute;
+    right: 0.3em;
+    top: -0.7em;
+}
+.dtpicker-header .dtpicker-close:hover {
+    color: #777;
+}
+.dtpicker-comp .increment,
+.dtpicker-comp .decrement {
+    border: 1px solid #DDD;
+    color: #BBB;
+    border-radius: 10px;
+}
+.dtpicker-comp .increment:hover,
+.dtpicker-comp .decrement:hover {
+    border: 1px solid #3cb0fd;
+    background: #3cb0fd;
+    color: #FFF;
+}
+.dtpicker-components .dtpicker-compValue {
+    background: none repeat scroll 0 0 #fff;
+    border: 0 none;
+    font-size: 20px;
+    margin: 0.4em 0;
+    width: 100%;
+}
