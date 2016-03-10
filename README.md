@@ -1,6 +1,6 @@
 # Reservation-App
 
-A simple web application for tracking restaurant reservations online.
+A simple single page application for placing & tracking restaurant reservations online.
 
 [View Demo &raquo;](http://rockrockinit.github.io/reservation-app/)  
 _(GitHub Pages Hosting)_
