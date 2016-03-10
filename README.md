@@ -10,6 +10,7 @@ _(GitHub Pages Hosting)_
 This application is simple restaurant reservation application built with jQuery. It saves reservations to localStorage and runs as a single page application (SPA).
 
 [![Mobile Screenshot](http://rockrockinit.github.io/reservation-app/img/readme/screenshot.png)](http://rockrockinit.github.io/reservation-app/)
+[![Mobile Screenshot](http://rockrockinit.github.io/reservation-app/img/readme/screenshot2.png)](http://rockrockinit.github.io/reservation-app/)
 
 ### Dependencies
 
