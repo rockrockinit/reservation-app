@@ -1,84 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="./datetimepicker.min.css" />
-    <link rel="stylesheet" href="./app.css" />
-    
-    <script src="./jquery.min.js"></script>
-    <script src="./datetimepicker.min.js"></script>
-    <script src="./app.js"></script>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  
+  <!-- No Cache -->
+  <meta http-equiv="cache-control" content="max-age=0" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta http-equiv="expires" content="0" />
+  <meta http-equiv="expires" content="Wed, 21 May 1975 9:00:00 GMT" />
+  <meta http-equiv="pragma" content="no-cache" />
+  
+  <title>Reservations</title>
+  
+  <link rel="stylesheet" href="css/datetimepicker.min.css" />
+  <link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
-    <nav>
-        <button class="btn">Add New</button>
-        <button class="btn">Reservations</button>
-        <a href="javascript:void(0)" class="btn-reset">Reset</a>
-    </nav>
-    
-    <div class="panes">
-        <div class="pane center">
-            <div class="box">
-                <form onsubmit="return false">
-                    <p>
-                        <label for="date">Date &amp; Time</label><br />
-                        <input type="text" id="date" name="date" data-field="date" autocomplete="off" readonly />
-                        <input type="text" id="time" name="time" data-field="time" autocomplete="off" readonly />
-                    </p>
-                    <p>
-                        <label for="name">Party's Name</label><br />
-                        <input type="text" id="name" name="name" autocomplete="off" />
-                    </p>
-                    <p>
-                        <label for="count"># People</label><br />
-                        <input type="text" id="count" name="count" maxlength="3" pattern="\d+" autocomplete="off" class="number" />
-                    </p>
-                    <p><button type="button" class="btn btn-add">+ Add</button></p>
-                </form>
-            </div>
-            <div id="dtBox"></div>
-        </div>
-        
-        <div class="pane">
-            <table class="items">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Name</th>
-                        <th>#</th>
-                        <th>Status</th>
-                        <th class="center"><button class="btn btn-remove-all">Remove All</button></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="no-items" data-tmpl="no-items">
-                        <td colspan="6">There are no current reservations</td>
-                    </tr>
-                    <tr data-tmpl="item">
-                        <td><div contenteditable>{{date}}</div></td>
-                        <td><div contenteditable>{{time}}</div></td>
-                        <td><div contenteditable>{{name}}</div></td>
-                        <td><div contenteditable class="number">{{count}}</div></td>
-                        <td>
-                            <select name="status">
-                                <option value="Open">Open</option>
-                                <option value="Filled">Filled</option>
-                                <option value="Canceled">Canceled</option>
-                            </select>
-                        </td>
-                        <td class="center">
-                            <button class="btn btn-remove">Remove</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            
-            <ul class="key">
-                <li><div class="square open"></div>Open</li>
-                <li><div class="square filled"></div>Filled</li>
-                <li><div class="square canceled"></div>Canceled</li>
-            </ul>
-        </div>
+  <nav>
+    <button class="btn">Add New</button>
+    <button class="btn">Reservations</button>
+    <a href="javascript:void(0)" class="btn-reset">Reset</a>
+  </nav>
+  
+  <div class="panes">
+    <div class="pane center">
+      <div class="box">
+        <form onsubmit="return false">
+          <p>
+            <label for="date">Date &amp; Time</label><br />
+            <input type="text" id="date" name="date" data-field="date" autocomplete="off" readonly />
+            <input type="text" id="time" name="time" data-field="time" autocomplete="off" readonly />
+          </p>
+          <p>
+            <label for="name">Party's Name</label><br />
+            <input type="text" id="name" name="name" autocomplete="off" />
+          </p>
+          <p>
+            <label for="count"># People</label><br />
+            <input type="text" id="count" name="count" maxlength="3" pattern="\d+" autocomplete="off" class="number" />
+          </p>
+          <p><button type="button" class="btn btn-add">+ Add</button></p>
+        </form>
+      </div>
+      <div id="dtBox"></div>
     </div>
+    
+    <div class="pane">
+      <table class="items">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Name</th>
+            <th>#</th>
+            <th>Status</th>
+            <th class="center"><button class="btn btn-remove-all">Remove All</button></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="no-items" data-tmpl="no-items">
+              <td colspan="6">There are no current reservations</td>
+          </tr>
+          <tr data-tmpl="item">
+            <td><div contenteditable>{{date}}</div></td>
+            <td><div contenteditable>{{time}}</div></td>
+            <td><div contenteditable>{{name}}</div></td>
+            <td><div contenteditable class="number">{{count}}</div></td>
+            <td>
+              <select name="status">
+                <option value="Open">Open</option>
+                <option value="Filled">Filled</option>
+                <option value="Canceled">Canceled</option>
+              </select>
+            </td>
+            <td class="center">
+              <button class="btn btn-remove">Remove</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+        
+      <ul class="key">
+        <li><div class="square open"></div>Open</li>
+        <li><div class="square filled"></div>Filled</li>
+        <li><div class="square canceled"></div>Canceled</li>
+      </ul>
+    </div>
+  </div>
+    
+  <script src="js/jquery.min.js"></script>
+  <script src="js/datetimepicker.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
